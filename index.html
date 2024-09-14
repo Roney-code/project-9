@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>image changer</title>
+<style type="text/css">
+	
+    .container{
+background-image: url("4321.JPG");
+background-size:cover;
+margin:auto;
+width:500px;
+height:300px;
+transform:translateY(50%);
+box-shadow:5px 8px 9px orange;
+}
+img{
+transform: translateX(80%);
+border-radius:50%;
+margin-top:-50px;
+box-shadow:5px 8px 9px orange;
+transition:transform 0.5s ease-out;
+}
+img.hover{
+transform:translate(0deg);
+width:400px;
+box-shadow:9px 11px 12px green;
+position:absolute;
+left:20px;
+height:300px;
+}
+.bio, .name{
+text-align:center;
+color:floralwhite;
+font-size:17px;
+font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<img scr="rashford.jpg" width="200px;" height="200px";>
+<p class="bio">This is just a simple project to do at home and at work</p>
+<h3 class="name"><span style="color:red;">GROUP A</span><span style="color:green;"> Is my group</span></h3>
+</div>
+<script type="text/javascript">
+const imageChanger=[
+{
+photo:"ron 1.jpg",
+text:"this year good news",
+Uname:"Michelle",
+
+},
+{
+photo:"ron 2.jfif",
+text:"this year money",
+Uname:"Benjamin",
+},
+{
+photo:"RON 3.jfif",
+text:"follow follow, follow follow you de go",
+Uname:"Ronnie",
+},
+
+]
+const
+img1=document.querySelector("img");
+const
+text1=document.querySelector(".bio");
+const
+nme=document.querySelector(".name");
+
+let start=0;
+imagechange()
+
+function imagechange() {
+const{photo,text,Uname}
+=imageChanger[start];
+
+img1.src=photo;
+text1.innerHTML=text;
+nme.innerHTML=Uname;
+start++
+if (start===imageChanger.length) {
+start=0;
+}
+
+setTimeout(imagechange,1000)
+}
+</script>
+</body>
+</html>
